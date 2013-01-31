@@ -32,10 +32,13 @@
       },
       "runtime" : {
          "requires" : {
+            "HTML::TreeBuilder::XPath" : 0,
+            "LWP::Simple" : 0,
+            "POE::Component::IRC::Plugin" : 0,
             "Test::More" : 0
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }

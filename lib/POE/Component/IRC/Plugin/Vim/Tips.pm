@@ -3,7 +3,7 @@ package POE::Component::IRC::Plugin::Vim::Tips;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use POE::Component::IRC::Plugin qw( :ALL );
 use HTML::TreeBuilder::XPath;
@@ -99,12 +99,12 @@ Version 0.01
     }
 
     sub irc_001 {
-        $irc->yield(join => '#zofbot');
+        $irc->yield(join => '#channel');
     }
 
 =head1 DESCRIPTION
 
-type !vimtip or !vimtips to get a random Vim tip, currenly fetched from  twitter.com/vimtips<http://twitter.com/vimtips>
+type !vimtip or !vimtips to get a random Vim tip, currenly fetched from L<http://twitter.com/vimtips>
 
 
 =head1 AUTHOR
@@ -151,6 +151,8 @@ L<http://search.cpan.org/dist/POE-Component-IRC-Plugin-Vim-Tips/>
 
 
 =head1 ACKNOWLEDGEMENTS
+
+Thanks to Graham Barr for guidance in my Perl work
 
 
 =head1 LICENSE AND COPYRIGHT
