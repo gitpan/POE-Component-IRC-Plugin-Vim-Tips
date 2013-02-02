@@ -1,12 +1,13 @@
 package POE::Component::IRC::Plugin::Vim::Tips;
 
+use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use POE::Component::IRC::Plugin qw( :ALL );
-use HTML::TreeBuilder::XPath;
+use Mojo::JSON;
 use LWP::Simple qw(get);
 
 sub new {
@@ -48,13 +49,14 @@ sub S_public {
 }
 
 sub _get_vim_tip {
-    my $content = get('http://twitter.com/vimtips');
-    my $tree    = HTML::TreeBuilder::XPath->new;
-    $tree->parse($content);
-    my @tips = $tree->findvalues(    #
-        './/li[@data-item-type="tweet"]//p[@class="js-tweet-text"]'
-    );
-    return @tips ? $tips[rand @tips] : '';
+    my $content = get('http://twitter.com/users/show_for_profile.json?screen_name=vimtips');
+    my $json    = Mojo::JSON->new;
+    my $hash = eval { $json->decode($content) };    #)) { warn Dumper $hash }
+    if (ref($hash) && ref($hash) eq 'HASH') {
+        my @tips = grep { $_ =~ s/\s+/ /g; 1 } map { $_->{text} } @{$hash->{timeline}};
+        return $tips[rand @tips] if @tips;
+    }
+    return '';
 }
 
 1;

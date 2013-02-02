@@ -14,7 +14,7 @@ WriteMakefile(
     PL_FILES  => {},
     PREREQ_PM => {
         'POE::Component::IRC::Plugin' => 0,
-        'HTML::TreeBuilder::XPath'    => 0,
+        'Mojo::JSON'                  => 0,
         'Test::More'                  => 0,
         'LWP::Simple'                 => 0
     },
