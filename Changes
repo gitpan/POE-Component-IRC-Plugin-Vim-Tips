@@ -1,3 +1,6 @@
+0.05    2013-02-07
+        Ack, I left a backup folder that Dist::Zilla found
+
 0.04    2013-02-07
         Convert to Dist::Zilla
         Remove debug content

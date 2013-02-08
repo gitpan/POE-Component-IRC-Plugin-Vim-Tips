@@ -4,13 +4,6 @@ MANIFEST
 META.yml
 Makefile.PL
 README
-bak/META.json
-bak/MYMETA.json
-bak/MYMETA.yml
-bak/benchmark.pl
-bak/blib/lib/POE/Component/IRC/Plugin/Vim/Tips.pm
-bak/blib/lib/POE/Component/IRC/Plugin/Vim/benchmark.pl
-bak/blib/man3/POE::Component::IRC::Plugin::Vim::Tips.3
 dist.ini
 lib/POE/Component/IRC/Plugin/Vim/Tips.pm
 t/00-load.t

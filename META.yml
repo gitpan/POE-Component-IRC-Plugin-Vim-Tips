@@ -17,4 +17,4 @@ requires:
   Mojo::JSON: 0
   POE::Component::IRC::Plugin: 0
   Test::More: 0
-version: 0.04
+version: 0.05
