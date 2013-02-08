@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.04';
+our $VERSION = '0.03';
 
 use POE::Component::IRC::Plugin qw( :ALL );
 use Mojo::JSON;
@@ -51,7 +51,7 @@ sub S_public {
 sub _get_vim_tip {
     my $content = get('http://twitter.com/users/show_for_profile.json?screen_name=vimtips');
     my $json    = Mojo::JSON->new;
-    my $hash = eval { $json->decode($content) };
+    my $hash = eval { $json->decode($content) };    #)) { warn Dumper $hash }
     if (ref($hash) && ref($hash) eq 'HASH') {
         my @tips = grep { $_ =~ s/\s+/ /g; 1 } map { $_->{text} } @{$hash->{timeline}};
         return $tips[rand @tips] if @tips;

@@ -1,8 +1,14 @@
-0.01    1/28/13
-        First version, released on an unsuspecting world.
+0.04    2013-02-07
+        Convert to Dist::Zilla
+        Remove debug content
 
-0.02    1/30/13
+0.03    2013-02-02
+        Switch from HTML::TreeBuilder::XPath to Mojo::JSON
+
+0.02    2013-01-13
         Don't forget to list dependencies in Makefile.PL
 
-0.03    2/2/13
-        Switch from HTML::TreeBuilder::XPath to Mojo::JSON
+0.01    2013-28-01
+        First version
+
+

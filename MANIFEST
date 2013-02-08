@@ -1,11 +1,22 @@
 Changes
-lib/POE/Component/IRC/Plugin/Vim/Tips.pm
+LICENSE
+MANIFEST
+META.yml
 Makefile.PL
-MANIFEST			This list of files
 README
+bak/META.json
+bak/MYMETA.json
+bak/MYMETA.yml
+bak/benchmark.pl
+bak/blib/lib/POE/Component/IRC/Plugin/Vim/Tips.pm
+bak/blib/lib/POE/Component/IRC/Plugin/Vim/benchmark.pl
+bak/blib/man3/POE::Component::IRC::Plugin::Vim::Tips.3
+dist.ini
+lib/POE/Component/IRC/Plugin/Vim/Tips.pm
 t/00-load.t
+t/author-critic.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/release-pod-coverage.t
+t/release-pod-syntax.t
