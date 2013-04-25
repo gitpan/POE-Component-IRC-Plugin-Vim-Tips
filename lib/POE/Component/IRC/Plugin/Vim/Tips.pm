@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use POE::Component::IRC::Plugin qw( :ALL );
 use Mojo::JSON;
@@ -71,7 +71,7 @@ POE::Component::IRC::Plugin::Vim::Tips - IRC plugin to fetch Vim tips
 
 =head1 VERSION
 
-Version 0.01
+Version 0.06
 
 
 =head1 SYNOPSIS
